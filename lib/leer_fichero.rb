@@ -1,4 +1,4 @@
-)
+def mapmap(a)
   a.map { |r| 
     r.map { |e| 
       yield e
