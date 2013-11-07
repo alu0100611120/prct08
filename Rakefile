@@ -7,10 +7,6 @@ RSpec::Core::RakeTask.new
 
 task :default => :spec
 
-	desc "run rspec tests"
-	task :spec do
-		sh "rspec -Ilib ./lib/* -Ispec spec/matriz_spec.rb"
-	end
 
 	desc "run rspec tests and documentation"
 	task :doc do
