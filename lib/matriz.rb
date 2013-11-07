@@ -1,6 +1,7 @@
 class Matriz
 	#Variables
-	@m
+	attr_accessor :m
+	
 	def initialize (matriz)
 		raise ArgumentError, 'El parámetro debe ser una matriz' unless matriz.is_a? Array
 		@m = matriz
@@ -16,7 +17,17 @@ class Matriz
 				texto += "#{@m[i][k]} "
 			end
 		end
-  texto
+		texto
+	end
+
+	def +(o)
+		#@result=Matriz.new([[0,0,0],[0,0,0]])
+		for i in 0...@m.length do
+			for k in 0...@m[i].length do
+				@m[i][k] = @m[i][k] + o[i][k]
+                        end
+		end
+		@m
 	end
 end
 
