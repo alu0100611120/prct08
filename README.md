@@ -4,7 +4,6 @@ Autores: Iván Cabaleiro Escudero
 	 Maurizio A. Rendón Mattogno
 
 
-
 Considere el desarrollo de una clase Ruby para representar Matrices. 
 1.-) Cree una clase para representar Matrices usando desarrollo dirigido por pruebas (Test Driven Development - TDD) con la herramienta Rspec. 
 
