@@ -39,6 +39,16 @@ class Matriz
 		return Matriz.new(@result)
 	end
 
+        def -(o)
+                @result = @m
+                for i in 0...@m.length do
+                        for k in 0...@m[i].length do
+                                @result[i][k] = @m[i][k] - o[i][k]
+                        end
+                end
+                return Matriz.new(@result)
+        end
+
 	def *(o)
 		tam = @m.length
 		@result = Array.new(tam, Array.new(tam ,0))
