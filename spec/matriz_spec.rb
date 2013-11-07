@@ -22,6 +22,10 @@ describe Matriz do
 		it "Se debe sumar dos matrices" do
 			(@m1+@m2).mostrar.should == "3 3 3 \n3 3 3 "
 		end
+		it "Se debe restar dos matrices" do
+                        (@m1-@m2).mostrar.should == "-1 -1 -1 \n-1 -1 -1 "
+                end
+
 		it "Se deben multiplicar matrices cuadradas" do
 			(@m3*@m3).mostrar.should == "16 16 \n16 16 "
 		end
