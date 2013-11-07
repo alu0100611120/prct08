@@ -20,14 +20,23 @@ class Matriz
 		texto
 	end
 
+	def [](n)
+		raise ArgumentError, "El parametro debe ser entero" unless n.is_a? Integer
+		if (n>=0) then
+			return @m[n]
+		else
+			return nil
+		end
+	end
+
 	def +(o)
-		#@result=Matriz.new([[0,0,0],[0,0,0]])
+		@result=Matriz.new([[0,0,0],[0,0,0]])
 		for i in 0...@m.length do
 			for k in 0...@m[i].length do
-				@m[i][k] = @m[i][k] + o[i][k]
+				@result[i][k] = @m[i][k] + o[i][k]
                         end
 		end
-		@m
+		@result
 	end
 end
 
