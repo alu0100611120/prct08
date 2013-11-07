@@ -30,13 +30,26 @@ class Matriz
 	end
 
 	def +(o)
-		@result=Matriz.new([[0,0,0],[0,0,0]])
+		@result = @m
 		for i in 0...@m.length do
 			for k in 0...@m[i].length do
 				@result[i][k] = @m[i][k] + o[i][k]
                         end
 		end
-		@result
+		return Matriz.new(@result)
+	end
+
+	def *(o)
+		tam = @m.length
+		@result = Array.new(tam, Array.new(tam ,0))
+		for i in 0...tam do
+    			for j in 0...tam do
+        			for k in 0...tam do
+         				@result[i][j] += @m[i][k]*o[k][j]
+        			end
+    			end
+  		end 
+		return Matriz.new(@result)
 	end
 end
 
