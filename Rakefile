@@ -7,13 +7,14 @@ RSpec::Core::RakeTask.new
 
 task :default => :spec
 
-	desc "run rspec tests"
-	task :spec do
+
+	desc "run rspec tests and documentation"
+	task :doc do
 		sh "rspec -Ilib ./lib/* -Ispec spec/matriz_spec.rb --format documentation"
 	end
 	
 	desc "build HTML"
-	task :spec do
+	task :html do
 		sh "rspec -Ilib ./lib/* -Ispec spec/matriz_spec.rb --format html > pruebas.html"
 	end
 
