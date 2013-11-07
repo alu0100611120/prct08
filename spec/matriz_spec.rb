@@ -5,7 +5,7 @@ describe Matriz do
 	before :each do
 		#Inicializar variables
 		@m1 = Matriz.new([[1,1,1],[1,1,1]])
-		@m2 = Matriz.new([[2,2,2],[2,2,2]])
+		@m2 = Matriz.new([[2,2],[2,2]])
 	end
 	#Sentencias it
 		it "Se debe de almacenar una matriz" do
@@ -22,4 +22,5 @@ describe Matriz do
 			(@m1+@m2).mostrar.should == "3 3 3 \n3 3 3 "
 		end
 end
+
 
