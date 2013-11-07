@@ -11,5 +11,8 @@ describe Matriz do
 		it "Se debe de almacenar una matriz" do
 			@m1.class.should == Matriz
 		end
+		it "Se debe mostrar la matriz" do
+			@m1.mostrar.should == "1 1 1 \n1 1 1 "
+		end
 end
 
