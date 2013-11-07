@@ -3,9 +3,8 @@ require "./lib/leer_fichero.rb"
 class Matriz
 	#Variables
 	@m
-	def initialize (cadena)
-		cadena.class
-		raise ArgumentError, 'El parámetro debe ser texto' unless cadena.is_a? String
-		@m = to_m(cadena)
+	def initialize (matriz)
+		raise ArgumentError, 'El parámetro debe ser una matriz' unless matriz.is_a? Array
+		@m = matriz
 	end
 end
