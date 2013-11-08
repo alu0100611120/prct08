@@ -1,5 +1,5 @@
-require "rspec"
-require "./lib/matriz.rb"
+require 'rspec'
+require 'matriz.rb'
 
 describe Matriz do
 	before :each do
