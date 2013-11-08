@@ -1,5 +1,6 @@
 require 'rspec'
 require 'matriz.rb'
+require 'racional.rb'
 
 describe Matriz do
 	before :each do
@@ -7,6 +8,7 @@ describe Matriz do
 		@m1 = Matriz.new([[1,1,1],[1,1,1]])
 		@m2 = Matriz.new([[2,2,2],[2,2,2]])
 		@m3 = Matriz.new([[2,2],[2,2]])
+		@m4 = Matriz.new([[Racional.new(1,2),Racional.new(1,2)],[Racional.new(1,2),Racional.new(1,2)]])
 	end
 	#Sentencias it
 		it "Se debe de almacenar una matriz" do
@@ -28,6 +30,9 @@ describe Matriz do
 
 		it "Se deben multiplicar matrices cuadradas" do
 			(@m3*@m3).mostrar.should == "16 16 \n16 16 "
+		end
+		it "Se debe sumar dos matrices de racionals" do
+			(@m4+@m4)[0][0].to_s.should == "1/1"
 		end
 end
 
