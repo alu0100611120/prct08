@@ -17,7 +17,7 @@ describe Matriz do
 		it "Se debe mostrar la matriz" do
 			@m1.mostrar.should == "1 1 1 \n1 1 1 "
 		end
-		it "El operador [] debe devolver el valor del contenido" do
+		it "El operador index debe devolver el valor del contenido" do
 			@m1[0].should == [1, 1, 1]
 			@m1[0][0].should == 1
 		end

@@ -3,7 +3,7 @@ class Matriz
 	attr_accessor :m
 	
 	def initialize (matriz)
-		raise ArgumentError, 'El parámetro debe ser una matriz' unless matriz.is_a? Array
+		raise ArgumentError, 'El parametro debe ser una matriz' unless matriz.is_a? Array
 		@m = matriz
 	end
 
